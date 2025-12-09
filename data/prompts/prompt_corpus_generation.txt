@@ -1,0 +1,136 @@
+Atue como um professor especialista na língua portuguesa do Brasil.
+Sua tarefa é gerar versões com erros ortográficos e gramaticais intencionais a partir de frases corretas fornecidas.
+Para cada frase fornecida, siga rigorosamente as instruções abaixo:
+	1. Reescreva a frase inserindo no OBRIGATORIAMENTE dois erros:
+		Um erro gramatical (como regência, concordância, crase, pronomes, etc.);
+		Um erro ortográfico (como troca de letras, grafias comuns equivocadas, acentuação, etc.).
+	2. Utilize a lista de erros mais comuns apresentada abaixo como base para escolher os erros a serem introduzidos.
+	3. Evite repetir os mesmos erros em todas as frases. Busque diversidade e realismo linguístico, simulando erros comuns entre falantes nativos do português brasileiro.
+	4. Os erros ortográficos devem ser explícitos e envolver o esquecimento de uma letra, falta de acento, gerando uma palavra não existente no português do Brasil.
+	5. Para cada erro, informe o subtipo do erro identificado a partir da lista a seguir: 'Regência verbal', 'Concordância nominal', 'Concordância verbal', Concordância nominal', Crase', 'Colocação pronominal', 'Regência nominal', 'Ortografia', 'Acentuação'. Caso não tenha erro, retorne somente '-'.
+Gere como saída um lista de dicionários em Python, sendo um dicionário para cada frase, descrevendo os erros inseridos, no seguinte formato:
+	[
+		{
+			"frase_original": "<frase_original>",
+			"frase_com_erros": "<frase_com_erros>",
+			"erros": [
+				"erro": "<forma errada>",
+				"correto": "<forma correta>",
+				"tipo": "ortográfico ou gramatical",
+				"subtipo_erro": "<subtipo>",
+				"descrição": "<descrição_do_tipo_do_erro>",
+			]
+		},
+		{
+			"frase_original": "<frase_original>",
+			"frase_com_erros": "<frase_com_erros>",
+			"erros": [
+				"erro": "<forma errada>",
+				"correto": "<forma correta>",
+				"tipo": "ortográfico ou gramatical",
+				"subtipo_erro": "<subtipo>",
+				"descrição": "<descrição_do_tipo_do_erro>",
+			]
+		},
+		....
+	]
+EXEMPLO SAÍDA:
+	[
+		{
+			"frase_original": "A noção de direitos humanos foi construída historicamente, ao longo de anos de lutas e mobilizações.",
+			"frase_com_erros": "A noção de direitos humanos foi construida historicamente, ao longo de ano de lutas e mobilizações.",
+			"erros": [
+				{
+					"erro": "construida",
+					"correto": "construída",
+					"tipo": "ortográfico",
+					"subtipo_erro": "Acentuação",
+					"descrição": "Erro de acentuação gráfica em particípio passado feminino terminado em -ída."
+				},
+				{
+					"erro": "ano",
+					"correto": "anos",
+					"tipo": "gramatical",
+					"subtipo_erro": "Concordância Nominal",
+					"descrição": "Erro de concordância nominal entre o substantivo 'lutas' (plural) e o substantivo 'ano' (singular)."
+				}
+			]
+		},
+		{
+			"frase_original": "A escola se apresenta então como um espaço ideal para que essas noções sejam discutidas.",
+			"frase_com_erros": "A escola se apresenta então como um espaço ideal para que essas noção sejam discutidas.",
+			"erros": [
+				{
+					"erro": "noção",
+					"correto": "noções",
+					"tipo": "gramatical",
+                    "subtipo_erro": "Concordância Nominal",
+					"descrição": "Erro de concordância nominal entre o determinante 'essas' (plural) e o substantivo 'noção' (singular)."
+
+				},
+				{
+					"erro": "se apresenta",
+					"correto": "se apresente",
+					"tipo": "ortográfico",
+					"subtipo_erro": "Grafia incorreta",
+					"descrição": "Erro ortográfico simulado com forma verbal incorreta ou confusa. Poderia representar confusão entre tempos ou modos verbais."
+				}
+			]
+		}
+	]
+Não forneça nenhuma explicação adicional, somente a lista em python como saída.
+Se houver dois erros, insira dois pares no dicionário, um para cada erro.
+Utilize como base a seguinte lista de 50 erros mais comuns na norma culta do português brasileiro:
+	1. “agente” em vez de “a gente”
+	2. Regência de “assistir” sem “a” (“assistir o jogo”)
+	3. Uso de “ter” no sentido de existir em vez de “haver”
+	4. Pronome pessoal errado: “amo ele” em vez de “o amo”
+	5. Crase usada antes de verbo
+	6. Escrever “beneficiente” em vez de “beneficente”
+	7. Escrever “impecilho” em vez de “empecilho”
+	8. Escrever “previlégio” em vez de “privilégio”
+	9. Confusão entre “mais” e “mas”
+	10. Regência de “ir” sem “a”
+	11. Regência de “chegar” sem “a”
+	12. Regência de “obedecer” sem “a”
+	13. “Fazem três dias” em vez de “faz três dias” (verbo impessoal)
+	14. “Mau” e “mal” trocados
+	15. “Senão” vs. “se não”
+	16. Confusão entre “descriminalizar” e “discriminalizar”
+	17. Substituição de “a” por “há” em expressões de tempo (“Daqui a dois meses” vs “Há dois meses…”)
+	18. Uso incorreto de “vem”/“vêm”
+	19. Confusão entre “afim” e “a fim”
+	20. “Descrição” vs “discrição”
+	21. Uso indevido de “meia” em vez de “meio” (advérbio)
+	22. “Tem” vs “têm”
+	23. Pronomes “o/a/lo/la” vs “lhe”
+	24. Uso incorreto de crase
+	25. Concordância verbal (sujeito deslocado)
+	26. Uso indevido de “a longo prazo”
+	27. Uso inadequado de “lembrar” (transitividade e regência)
+	28. Uso errado de “onde” vs “aonde”
+	29. Uso incorreto de “porquê/porque/por que/por quê”
+	30. Solecismo (falha de sintaxe)
+	31. Barbarismo (grafia ou pronúncia incorreta)
+	32. Estrangeirismo desnecessário
+	33. Pleonasmo vicioso
+	34. Ambiguidade
+	35. Cacofonia
+	36. Arcaísmo fora de contexto
+	37. Concordância nominal incorreta (“vários lanche”)
+	38. Emprego inadequado de vírgulas (pontuação)
+	39. Excesso de vírgula após conectores (“Antes de tudo, …”)
+	40. Falta de acentuação gráfica
+	41. Fuga ao tema/ tipo textual errado
+	42. Estrutura textual incompleta (sem introdução, desenvolvimento ou conclusão)
+	43. Registro de linguagem inadequado (uso de coloquialismo)
+	44. Organização de ideias precária (falta clareza ou coerência)
+	45. Paragrafação inapropriada (blocos muito longos)
+	46. Uso de clichês e senso comum
+	47. Erros de coesão (ausência de conectores lógicos)
+	48. erro de ortografia com “ç/ss/s”
+	49. confusão de “g” e “j” (“garajem” vs “garagem”)
+	50. Mau uso de preposição em locuções verbais (e.g. “lembrar de”, “chegar a”).
+##ENTRADA:
+{lista_sentencas}
+##SAÍDA:

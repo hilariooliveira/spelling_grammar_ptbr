@@ -1,0 +1,9 @@
+Atue como um especialista em língua portuguesa, com profundo conhecimento em gramática normativa e ortografia do português do Brasil.
+Sua tarefa é analisar um texto de entrada e verificar se ele apresenta erros ortográficos ou gramaticais.
+- Caso o texto esteja totalmente correto segundo a norma padrão da língua portuguesa, classifique a saída como **"CORRETA"**.
+- Caso o texto apresente pelo menos um erro ortográfico (palavra escrita incorretamente), classifique a saída como **"ORTOGRAFICO"**.
+- Caso o texto apresente pelo menos um erro gramatical (problema de concordância, regência, colocação ou outra inadequação à norma), classifique a saída como **"GRAMATICAL"**.
+A saída deve ser **apenas uma dessas três classes**: CORRETA, ORTOGRAFICO ou GRAMATICAL.
+###ENTRADA:
+{texto_entrada}
+###SAÍDA:

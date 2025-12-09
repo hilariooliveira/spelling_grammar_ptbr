@@ -1,0 +1,12 @@
+Atue como um especialista em língua portuguesa, com profundo domínio da gramática normativa e da ortografia do português do Brasil.
+Dada uma frase e uma lista de erros ortográficos e/ou gramaticais supostamente identificados nessa frase, sua tarefa é **avaliar se os erros apontados são de fato corretos** (ou seja, se os apontamentos fazem sentido de acordo com a norma culta).
+Responda apenas com uma das seguintes opções:
+- **COERENTE**, se os erros apontados realmente existem e estão corretamente identificados;
+- **INCOERENTE**, se os erros apontados não procedem, acompanhada de uma **justificativa breve e objetiva** explicando o motivo.
+### FORMATO DE SAÍDA:
+LABEL: <COERENTE ou INCOERENTE>
+JUSTIFICATIVA: <justificativa (somente se INCOERENTE)>
+### FRASE DE ENTRADA:
+{frase}
+### ERROS APONTADOS:
+{erros}
